@@ -1,0 +1,57 @@
+Đề tài 1: Xây dựng chương trình Khôi phục và Nâng cao ảnh scan từ ảnh cũ
+
+Mục tiêu
+Phát triển một ứng dụng trên máy tính (PC) có thể:
+Nhận ảnh scan từ ảnh cũ (thường bị mờ, nhiễu, độ phân giải thấp).
+Khôi phục chất lượng ảnh thông qua:
+- Khử nhiễu (denoise)
+- Khử mờ (deblur)
+- Nâng cấp độ phân giải (super-resolution)
+Hiển thị ảnh trước và sau xử lý để người dùng đánh giá, đồng thời cho
+phép lưu kết quả.
+
+Chức năng yêu cầu
+Giao diện người dùng (GUI) đơn giản bằng PyQt:
+Nhập ảnh (JPG, PNG) hoặc thư mục ảnh.
+Chọn chế độ xử lý:
+a) Denoise
+b) Deblur
+c) Super-resolution
+Tùy chỉnh tham số: mức độ xử lý, tỉ lệ phóng đại (2x, 4x).
+Hiển thị ảnh gốc và ảnh sau xử lý cạnh nhau.
+Lưu ảnh kết quả vào thư mục đầu ra.
+
+Các kỹ thuật xử lý ảnh:
+Khử nhiễu (Denoising):
+Sử dụng thuật toán như Non-Local Means, Bilateral Filter, hoặc
+FastNlMeans (có sẵn trong OpenCV).
+Khử mờ (Deblurring):
+Dùng Wiener deconvolution, hoặc kỹ thuật sharpen nâng cao với kernel tùy biến.
+Nâng độ phân giải (Super-resolution):
+Tích hợp mô hình AI nhẹ như Real-ESRGAN luyện sẵn (pre-trained).
+
+Kết quả mong đợi
+Phần mềm chạy được trên máy tính (Windows/Linux).
+Xử lý được các ảnh test với chất lượng cải thiện rõ rệt.
+Có giao diện người dùng hoặc hướng dẫn CLI rõ ràng.
+Báo cáo kỹ thuật trình bày:
+Giải thích các kỹ thuật dùng.
+So sánh ảnh trước/sau bằng mắt thường và chỉ số PSNR, SSIM.
+Tài liệu & Công cụ tham khảo
+Super-resolution:
+Real-ESRGAN (mô hình mạnh, dễ chạy):
+https://github.com/xinntao/Real-ESRGAN
+SwinIR – Transformer for Restoration:
+https://github.com/JingyunLiang/SwinIR
+Khử nhiễu và khử mờ:
+OpenCV Denoising:
+https://docs.opencv.org/4.x/d5/d69/tutorial_py_non_local_means.html
+Wiener Filter (scikit-image):
+https://scikit-image.org/docs/stable/auto_examples/filters/plot_wiener.html
+Tổng quan xử lý ảnh nâng cao với scikit-image:
+https://scikit-image.org/docs/stable/user_guide/tutorials.html
+Dataset (tùy chọn nếu cần thử nghiệm):
+Old Photos Dataset (Kaggle):
+https://www.kaggle.com/datasets/balraj98/old-photos-dataset
+GoPro Deblurring Dataset:
+https://github.com/SeungjunNah/DeepDeblur_release

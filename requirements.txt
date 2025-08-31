@@ -1,0 +1,7 @@
+PyQt5>=5.15
+opencv-python>=4.8
+numpy>=1.24
+scipy>=1.10
+Pillow>=9.5
+py-real-esrgan>=0.3.0
+scikit-image>=0.22
